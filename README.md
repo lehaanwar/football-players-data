@@ -72,11 +72,15 @@ Machine learning models to predict future player potential and career trajectori
 
 
 ## Business Requirements
-* 
+* BR1 - Identify the highest player skills by overall rating player by potential.
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* HP1 - The higher rated the player, the more expensive.
+* HP2 - the more skillful the player, the higher the rating.
+* HP3 - the taller the player, the higher rating the header score.
+* HP4 - the higher rated ball control the higher rated the finishing of a player.
+* HP5 - the higher rated the crossing, the higher rated the freekick accuracy.
 
 ## Project Plan
 * Valid the Hypotheses by using statistical tests
@@ -89,6 +93,31 @@ Machine learning models to predict future player potential and career trajectori
  Outline the high-level steps taken for the analysis.
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
+
+## Stakeholders
+* Football scouts - identify talented players across various leagues.
+* Football agents (intermediaries) - manage players, negotiate contracts and close deals.
+* Club technical staff and coaches - need to know the skill of potential new players to improve new needs.
+* Football pundits & journalists - to provide informed content & commentary.
+* Fantasy football players and betters - to compete and play.
+* Social media and content creators - create videos to analyse games.
+* National team managers - choose the players they wish to add to their national sides.
+* Advertising companies - decide who to choose their ads and marketing campaigns.
+* Video games creators - accurately reperesent player skills in their video games.
+* Fans - They can accurately discuss their team with their peers.
+
+## User stories
+* US1 - As a football scout, I want to know the skillset of the players so it can help me identify talented players across the leagues.
+* US2 - As a football agent, I want to know the skillset of players, their wages, value, and their release clauses so that help me manage players better and negotiate their contracts.
+* US3 - As Club technical staff and coaches, I want to know the skillset, age, weight, height to help players with their physical needs to improve the team. 
+* US4 - As Football pundits & journalists, 
+* US4 - As Fantasy football players and betters, 
+* US4 - As Social media and content creators, 
+* US4 - As National team managers, 
+* US4 - As Advertising companies, 
+* US4 - As Video games creators, 
+* US4 - As football fans, 
+
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
