@@ -69,18 +69,86 @@ Market value assessment and wage prediction.
 Team composition and strategy planning.
 Machine learning models to predict future player potential and career trajectories.
 
+## Stakeholders
 
+* Football scouts - identify talented players across various leagues.
+* Football agents (intermediaries) - manage players, negotiate contracts and close deals.
+* Club technical staff and coaches - need to know the skill of potential new players to improve new needs.
+* Football pundits & journalists - to provide informed content & commentary.
+* Fantasy football players and punters - to compete and play.
+* Social media and content creators - create videos to analyse games.
+* National team managers - choose the players they wish to add to their national sides.
+* Advertising companies - decide who to choose their ads and marketing campaigns.
+* Video games creators - accurately reperesent player skills in their video games.
+* Fans - They can accurately discuss their team with their peers.
+
+## User stories
+
+* US1 - As a football scout, I want to access detailed player skill ratings so that I can identify and shortlist talented players across multiple leagues.
+* US2 - As a football agent, I want to access detailed player skill ratings, their wages, value, and their release clauses so that I can manage players better and negotiate their contracts.
+* US3 - As a club technical staff member or coach, I want to access detailed player profiles — including skill ratings, age, physical attributes such as weight, height, and body type — so that I can assess players' physical needs, tailor training and dietary plans, and make informed decisions to strengthen the team.
+* US4 - As a football pundit or journalist, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can accurately describe and report on players when commentating or writing.
+* US4 - As a Fantasy football player and a punter, I want to access detailed player profiles — including full name, position(s) and skill ratings — so that I can make infored decisions when selecting players and placing any bets.
+* US4 - As a social media content creator, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can produce accurate and engaging content that analyses and showcases players to my audience.
+* US4 - As a national team manager, I want to access detailed player profiles — including skill ratings, international reputation, national rating, position(s), age, and nationality — so that I can make informed selection decisions when choosing players for my national squad.
+* US4 - As an advertising company, I want to access detailed player profiles — including full name, date of birth, age, height, weight, position(s), nationality, overall rating, and international reputation — so that I can make informed decisions when selecting the most suitable player for my marketing campaigns.
+* US4 - As a video game creator, I want to access comprehensive player profiles — including full name, physical attributes, skill ratings, position(s), nationality, and overall rating — so that I can accurately represent each player as a realistic in-game avatar.
+* US4 - As a football fan, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can engage in informed and meaningful discussions about players with my friends and peers.
 
 ## Business Requirements
-* BR1 - Identify the highest player skills by overall rating player by potential.
+A Data analyst has been approached by a Football data company that has provided a comprehensive dataset that contains information on football players. This includes the following; Players characteristics/attributes such as full name, age, date of birth, height, weight etc. Player technical skills such as passing, finishing, volleys, dribbling etc, it also includes players financial information such as players wages, values and release clauses and information about their national team such as nationality, national team, national rating, national team position etc.
 
+The company consists of a range of Stakeholders: Football scouts, football agents (intermediaries), club technical staff and coaches, football pundits & journalists, fantasy football players and punters, social media and content creators, national team managers, advertising companies, video games creators, football fans they all have their own needs and when analysing and using the data.
+
+BR1: Player Valuation
+•Identify the relationships between player attributes such as age, skill ratings, international reputation and their wages, value and release clauses.
+•Show relationships with data visualisations such as scatter plots and heat maps.
+•Succes criteria:
+
+BR2: Players performances
+•Analyse and compare player skill ratings, such as finishing, passing, crossing.
+•Enable stakeholders to filter and identify players by position and skillset.
+•Provide visualisations that highlight top 10 performing players
+•Success criteria:
+
+BR3: Player Biographical Profiling
+•Access to biographical and physical data such as age, nationality, height and weight
+•Success criteria:
+
+BR4: Predict player model
+•Develop a machine learning model to predict a player's wage or release clause based on their attributes
+•Achieve a minimum acceptable accuracy on unseen data
+•Enable stakeholders such as agents and clubs to estimate a player's market value before negotiations
+•Success Criteria: Model R² ≥ 0.85, MAE within an acceptable euro threshold, validated through cross-validation
+
+BR5: Player profiles internationally
+•Analyse the relationship between a player's international reputation, overall rating, and their public profile
+•Support stakeholders such as advertising companies, journalists, and content creators in identifying high profile players
+•Provide rankings and visualisations of players by overall rating and international reputation
+•Success Criteria:
+
+BR6: Interactive Dashboard & Data Exploration
+•Create a user friendly dashboard for non-technical stakeholders to explore player data
+•Enable filtering and segmentation by multiple criteria including position, nationality, age, and skill ratings
+•Provide real time visualisations of player distributions and comparisons
+•Success Criteria: Dashboard accessible without coding knowledge, responsive to all filter combinations, and usable by stakeholders ranging from football fans to professional scouts
 
 ## Hypothesis and how to validate?
-* HP1 - The higher rated the player, the more expensive.
-* HP2 - the more skillful the player, the higher the rating.
-* HP3 - the taller the player, the higher rating the header score.
-* HP4 - the higher rated ball control the higher rated the finishing of a player.
-* HP5 - the higher rated the crossing, the higher rated the freekick accuracy.
+
+* HP1 - The higher a player's overall rating, the higher their wage, value and release clause.
+How to validate:
+
+* HP2 - the higher the individual skill rating, the higher the overall rating.
+How to validate:
+
+* HP3 - Taller players will have a higher heading accuracy.
+How to validate:
+
+* HP4 - the higher a player is rated on ball control, the higher rated the finishing.
+How to validate:
+
+* HP5 - players with higher crossing rating will have a higher freekick accuracy.
+How to validate:
 
 ## Project Plan
 * Valid the Hypotheses by using statistical tests
@@ -94,29 +162,7 @@ Machine learning models to predict future player potential and career trajectori
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
 
-## Stakeholders
-* Football scouts - identify talented players across various leagues.
-* Football agents (intermediaries) - manage players, negotiate contracts and close deals.
-* Club technical staff and coaches - need to know the skill of potential new players to improve new needs.
-* Football pundits & journalists - to provide informed content & commentary.
-* Fantasy football players and betters - to compete and play.
-* Social media and content creators - create videos to analyse games.
-* National team managers - choose the players they wish to add to their national sides.
-* Advertising companies - decide who to choose their ads and marketing campaigns.
-* Video games creators - accurately reperesent player skills in their video games.
-* Fans - They can accurately discuss their team with their peers.
 
-## User stories
-* US1 - As a football scout, I want to know the skillset of the players so it can help me identify talented players across the leagues.
-* US2 - As a football agent, I want to know the skillset of players, their wages, value, and their release clauses so that help me manage players better and negotiate their contracts.
-* US3 - As Club technical staff and coaches, I want to know the skillset, age, weight, height to help players with their physical needs to improve the team. 
-* US4 - As Football pundits & journalists, 
-* US4 - As Fantasy football players and betters, 
-* US4 - As Social media and content creators, 
-* US4 - As National team managers, 
-* US4 - As Advertising companies, 
-* US4 - As Video games creators, 
-* US4 - As football fans, 
 
 
 ## The rationale to map the business requirements to the Data Visualisations
