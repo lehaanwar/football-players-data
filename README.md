@@ -174,9 +174,68 @@ How to validate:
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
-## Ethical considerations
-Data ethics in data analytics and AI
+## Data Ethics
+
+Ethics refers to the moral principles that govern a person's or organisation's behaviour and decision making. In the context of data and artificial intelligence, ethics concerns how data is collected, used, and interpreted, and whether the systems built from that data are fair, transparent, and beneficial to society. The overarching goal of data ethics can be summarised simply as maximum benefit and minimum harm.
+
+## Asimov's Laws of Robotics
+The foundation of thinking about machine ethics was established by science fiction writer Isaac Asimov in 1942, who proposed three laws of robotics that remain highly relevant to AI development today:
+
+* A robot may not injure a human being, or through inaction allow a human being to come to harm.
+* A robot must obey orders given by humans, except where such orders would conflict with the first law.
+* A robot must protect its own existence, as long as such protection does not conflict with the first or second law
+
+Asimov later added a fourth overarching law — that a robot may not harm humanity, or through inaction allow humanity to come to harm. These laws established the principle that machines and AI systems should always prioritise human safety and wellbeing, a principle that underpins modern AI ethics frameworks.
+
+## European Parliament Civil Law Rules
+
+The EU set out civil law guidelines in 2017, which ultimately resulted in the landmark EU AI Act of 2023. The European Parliament established the following civil law rules regarding AI and robotics:
+
+* Robot manufacturers are liable for any damage caused.
+* Robot users are liable for damage caused through improper use
+* Robot teachers are liable for damage caused during training
+* Robot owners or lessees are liable for damage caused during operation
+* Guidelines are available for sovereign parliaments to modify their existing laws accordingly
+* Many robots are already legislated for under existing health, safety, and machine operation laws
+
+## Ethical considerations in AI
+
+Ethics must be embedded into every stage of the AI development process, from initial concept through to final deployment. Using design thinking tools that prioritise user needs and ethical considerations, developers can conduct scenario analysis to explore potential ethical dilemmas and design solutions that minimise harm while maximising benefits. User research helps developers understand the diverse needs and concerns of the people who will be affected by AI systems.
+
+An important factor in AI development is algorithmic fairness. Developers must ensure that AI systems do not perpetuate or escalate existing biases. This can be achieved through careful data selection, bias mitigation techniques, and ongoing testing for fairness throughout the development process.
+
+Open communication is essential, through regular ethics reviews and meetings where team members can discuss potential ethical risks and how to mitigate them. These discussions should be inclusive, allowing for diverse perspectives and encouraging collaboration across different departments. Ethical concerns should also be reportable to a dedicated ethics officer or hotline.
+
+Building an ethical AI culture requires more than just policies and procedures — it requires fostering a mindset of ethical responsibility throughout the organisation, creating a workplace where ethical considerations are valued and prioritised in every decision. This includes ethics training and regular updates on new developments in AI ethics and best practices.
+
+## Biases in Generative AI
+
+Generative AI systems can show bias ranging from racial preference to gender based stereotyping. The AI pipeline consists of three stages:
+
+* Input — data is gathered and prepared for AI use
+* Model — the AI system is developed and trained using prepared data
+* Output — the AI generates results based on its training
+
+Generative AI focuses mostly on the output stage. There are four key ethical principles that must be applied:
+
+1. Transparency — the system's decision making must be explainable
+
+2. Fairness — outputs must not discriminate or show bias
+
+3. Accountability — developers must be able to explain and justify outcomes
+
+4. Privacy — data protection must be maintained throughout
+
+Best practice to reduce bias includes using a 'dislike' feedback mechanism, giving more specific instructions, and regularly reviewing and adjusting outputs.
+
+## Ethical considerations in this project
+
 * Were there any data privacy, bias or fairness issues with the data?
+
+1. Data Privacy - As this dataset contains personal information about football players which include their full names, date of birth, nationality, wages, height, weight etc. The data needs to be handled responsibiliy with care and only used for analytical purposes. I can confirm that this data has only been used for conducting analysis.
+
+2. Bias and fairness - As this dataset contains nationality and physical attributes, no predictions or conclusions should be influenced in a discriminatory way.
+
 * How did you overcome any legal or societal issues?
 
 ## Dashboard Design
