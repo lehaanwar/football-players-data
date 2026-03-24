@@ -103,6 +103,7 @@ sliding_tackle: Rating for sliding tackle.
 * US4 - As a football fan, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can engage in informed and meaningful discussions about players with my friends and peers.
 
 ## Business Requirements
+
 A Data analyst has been approached by a Football data company that has provided a comprehensive dataset that contains information on football players. This includes the following; Players characteristics/attributes such as full name, age, date of birth, height, weight etc. Player technical skills such as passing, finishing, volleys, dribbling etc, it also includes players financial information such as players wages, values and release clauses and information about their national team such as nationality, national team, national rating, national team position etc.
 
 The company consists of a range of Stakeholders: Football scouts, football agents (intermediaries), club technical staff and coaches, football pundits & journalists, fantasy football players and punters, social media and content creators, national team managers, advertising companies, video games creators, football fans they all have their own needs and when analysing and using the data.
@@ -143,29 +144,98 @@ BR6: Interactive Dashboard & Data Exploration
 ## Hypothesis and how to validate?
 
 * HP1 - The higher a player's overall rating, the higher their wage, value and release clause.
-How to validate:
+
+How to validate: Heat map, correlation matrix, violin plots, histogram
+
+Results: Hypothesis supported by findings
 
 * HP2 - the higher the individual skill rating, the higher the overall rating.
-How to validate:
+
+How to validate: violin plots, histogram
+
+Results: Hypothesis supported by findings
 
 * HP3 - Taller players will have a higher heading accuracy.
-How to validate:
+
+How to validate: Scatter plots and correlation (visual validation)
+
+Results: Grouped HP3-5 to create scatterplots and correlation to check if Hypothese can be proven. 
+
+* Disproved
 
 * HP4 - the higher a player is rated on ball control, the higher rated the finishing.
-How to validate:
+
+How to validate: Scatter plots and correlation (visual validation)
+
+Results: Approved
 
 * HP5 - players with higher crossing rating will have a higher freekick accuracy.
-How to validate:
+
+How to validate: Scatter plots and correlation (visual validation)
+
+Results: Approved
+
+When doing the core concepts I added another Hypothesis.
+
+* HP6 - Is there a significant difference in overall_rating between players under 25 and players 25 and older?
+
+Null Hypothesis: There is no difference in the overall rating of players under 25 and players who are over 25.
+
+Alternate Hypotheis: There is a significant difference in the overall rating of players under 25 and players who are over 25.
+
+How to validate: T-test
+
+Result: t_statistic: -4.638399535742817
+
+p_value: 4.11081204067634e-06
+
+The p-value is 4.11e-0.6 which converts to 0.00000.41 which far below than 0.05, which means I reject the null hypothesis. There is statistically significant evidence that overall ratings differ between the two age groups.
+
+The t-statistic shows a negative value of -4.638 means players under 25 have a lower mean overall rating than players (5 and older — which intuitively makes sense, as older players tend to be more experienced.
 
 ## Project Plan
+
 * Valid the Hypotheses by using statistical tests
+
 * Display atleast 4 different plots to help answer the business requirements and in the dashboard.
+
 * Machine Learning algorithm for predictive analysis
-* Ethical considerations - Legal and social 
+
+* Ethical considerations - Legal and social
+
 * Created a dashboard with PowerBI that is user friendly and easy to navigate
+
 * Reflections and constant updates to README
 
- Outline the high-level steps taken for the analysis.
+## High-level steps taken for the analysis
+
+ ETL Process – Load the dataset taken from Kaggle into VS code.
+
+Transform the data by the cleaning process; missing values, duplicates and outliers.
+
+Used ML feature called Drop feature, there were a lot of columns for individual skills, grouped columns together and then dropped them to keep data clean and easier to analyse.
+
+Created four new features: Defense attributes - marking, standing tackle, sliding tackle, aggression, strength, interceptions, composure
+
+Attack attributes – finishing, heading accuracy, volleys, long shots, shot power, positioning, penalties
+
+Passing attributes – short passing, long passing, curve, freekick accuracy, crossing, ball control, vision, reactions, dribbling
+
+Pace attributes – acceleration, sprint speed, agility, balance, stamina, jumping
+
+Loading the cleaned data in to the appropriate files and folders so it can used for data analysis.
+
+Data Analysis: conducted descriptive statistics such as mean, median, standard deviation.
+
+Visualisation of data: Using scatterplots, boxplots and barplots to identify key correlations between the different variables.
+
+In depth Data Visualisation: Using scatter plots and heatmaps to examine relations and correlations that relate back to my busiess requirements and hypotheses.
+
+Created a Machine Learning algorithm to predict value_euro based on overall_rating, potential using linear regression and Random forest regression.
+
+Reports:
+Consistently reported progress and maintained comprehensive documentation throughout the project's duration.
+
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
 
@@ -173,13 +243,51 @@ How to validate:
 
 
 ## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+
+A Data analyst has been approached by a Football data company that has provided a comprehensive dataset that contains information on football players. This includes the following; Players characteristics/attributes such as full name, age, date of birth, height, weight etc. Player technical skills such as passing, finishing, volleys, dribbling etc, it also includes players financial information such as players wages, values and release clauses and information about their national team such as nationality, national team, national rating, national team position etc.
+
+The company consists of a range of Stakeholders: Football scouts, football agents (intermediaries), club technical staff and coaches, football pundits & journalists, fantasy football players and punters, social media and content creators, national team managers, advertising companies, video games creators, football fans they all have their own needs and when analysing and using the data.
+
+BR1: Player Valuation
+•Identify the relationships between player attributes such as age, skill ratings, international reputation and their wages, value and release clauses.
+•Show relationships with data visualisations such as scatter plots and heat maps.
+•Succes criteria:
+
+BR2: Players performances
+•Analyse and compare player skill ratings, such as finishing, passing, crossing.
+•Enable stakeholders to filter and identify players by position and skillset.
+•Provide visualisations that highlight top 10 performing players
+•Success criteria:
+
+BR3: Player Biographical Profiling
+•Access to biographical and physical data such as age, nationality, height and weight
+•Success criteria:
+
+BR4: Predict player model
+•Develop a machine learning model to predict a player's wage or release clause based on their attributes
+•Achieve a minimum acceptable accuracy on unseen data
+•Enable stakeholders such as agents and clubs to estimate a player's market value before negotiations
+•Success Criteria: Model R² ≥ 0.85, MAE within an acceptable euro threshold, validated through cross-validation
+
+BR5: Player profiles internationally
+•Analyse the relationship between a player's international reputation, overall rating, and their public profile
+•Support stakeholders such as advertising companies, journalists, and content creators in identifying high profile players
+•Provide rankings and visualisations of players by overall rating and international reputation
+•Success Criteria:
+
+BR6: Interactive Dashboard & Data Exploration
+•Create a user friendly dashboard for non-technical stakeholders to explore player data
+•Enable filtering and segmentation by multiple criteria including position, nationality, age, and skill ratings
+•Provide real time visualisations of player distributions and comparisons
+•Success Criteria: Dashboard accessible without coding knowledge, responsive to all filter combinations, and usable by stakeholders ranging from football fans to professional scouts
 
 ## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+
+Structured approach: I structured the data analysis technique by following the module handbook and going through each criteria to add to my project, this included reviewing each section. By adhering to the handbook's guidance, I was able to incorporate all necessary elements and maintain consistency throughout the analysis process.
+
+Data limitations: The data did not present any limitations; however, it could have been more of a challenge. There were no missing values or duplicates, which streamlined the data cleaning process. Additionally, there was only one categorical variable which I could not conduct in-depth analysis on categorical data.
+
+Generative AI: I used AI to help with the code and ideas which helped me immensely throughout this project.
 
 ## Data Ethics
 
