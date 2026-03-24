@@ -79,27 +79,45 @@ sliding_tackle: Rating for sliding tackle.
 ## Stakeholders
 
 * Football scouts - identify talented players across various leagues.
+
 * Football agents (intermediaries) - manage players, negotiate contracts and close deals.
+
 * Club technical staff and coaches - need to know the skill of potential new players to improve new needs.
+
 * Football pundits & journalists - to provide informed content & commentary.
+
 * Fantasy football players and punters - to compete and play.
+
 * Social media and content creators - create videos to analyse games.
+
 * National team managers - choose the players they wish to add to their national sides.
+
 * Advertising companies - decide who to choose their ads and marketing campaigns.
+
 * Video games creators - accurately reperesent player skills in their video games.
+
 * Fans - They can accurately discuss their team with their peers.
 
 ## User stories
 
 * US1 - As a football scout, I want to access detailed player skill ratings so that I can identify and shortlist talented players across multiple leagues.
+
 * US2 - As a football agent, I want to access detailed player skill ratings, their wages, value, and their release clauses so that I can manage players better and negotiate their contracts.
+
 * US3 - As a club technical staff member or coach, I want to access detailed player profiles — including skill ratings, age, physical attributes such as weight, height, and body type — so that I can assess players' physical needs, tailor training and dietary plans, and make informed decisions to strengthen the team.
+
 * US4 - As a football pundit or journalist, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can accurately describe and report on players when commentating or writing.
+
 * US4 - As a Fantasy football player and a punter, I want to access detailed player profiles — including full name, position(s) and skill ratings — so that I can make infored decisions when selecting players and placing any bets.
+
 * US4 - As a social media content creator, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can produce accurate and engaging content that analyses and showcases players to my audience.
+
 * US4 - As a national team manager, I want to access detailed player profiles — including skill ratings, international reputation, national rating, position(s), age, and nationality — so that I can make informed selection decisions when choosing players for my national squad.
+
 * US4 - As an advertising company, I want to access detailed player profiles — including full name, date of birth, age, height, weight, position(s), nationality, overall rating, and international reputation — so that I can make informed decisions when selecting the most suitable player for my marketing campaigns.
+
 * US4 - As a video game creator, I want to access comprehensive player profiles — including full name, physical attributes, skill ratings, position(s), nationality, and overall rating — so that I can accurately represent each player as a realistic in-game avatar.
+
 * US4 - As a football fan, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can engage in informed and meaningful discussions about players with my friends and peers.
 
 ## Business Requirements
@@ -111,35 +129,35 @@ The company consists of a range of Stakeholders: Football scouts, football agent
 BR1: Player Valuation
 •Identify the relationships between player attributes such as age, skill ratings, international reputation and their wages, value and release clauses.
 •Show relationships with data visualisations such as scatter plots and heat maps.
-•Succes criteria:
+
 
 BR2: Players performances
 •Analyse and compare player skill ratings, such as finishing, passing, crossing.
 •Enable stakeholders to filter and identify players by position and skillset.
 •Provide visualisations that highlight top 10 performing players
-•Success criteria:
+
 
 BR3: Player Biographical Profiling
 •Access to biographical and physical data such as age, nationality, height and weight
-•Success criteria:
+•
 
 BR4: Predict player model
 •Develop a machine learning model to predict a player's wage or release clause based on their attributes
 •Achieve a minimum acceptable accuracy on unseen data
 •Enable stakeholders such as agents and clubs to estimate a player's market value before negotiations
-•Success Criteria: Model R² ≥ 0.85, MAE within an acceptable euro threshold, validated through cross-validation
+
 
 BR5: Player profiles internationally
 •Analyse the relationship between a player's international reputation, overall rating, and their public profile
 •Support stakeholders such as advertising companies, journalists, and content creators in identifying high profile players
 •Provide rankings and visualisations of players by overall rating and international reputation
-•Success Criteria:
+
 
 BR6: Interactive Dashboard & Data Exploration
 •Create a user friendly dashboard for non-technical stakeholders to explore player data
 •Enable filtering and segmentation by multiple criteria including position, nationality, age, and skill ratings
 •Provide real time visualisations of player distributions and comparisons
-•Success Criteria: Dashboard accessible without coding knowledge, responsive to all filter combinations, and usable by stakeholders ranging from football fans to professional scouts
+
 
 ## Hypothesis and how to validate?
 
@@ -209,7 +227,7 @@ The t-statistic shows a negative value of -4.638 means players under 25 have a l
 
 ## High-level steps taken for the analysis
 
- ETL Process – Load the dataset taken from Kaggle into VS code.
+ETL Process – Load the dataset taken from Kaggle into VS code.
 
 Transform the data by the cleaning process; missing values, duplicates and outliers.
 
@@ -239,9 +257,6 @@ Consistently reported progress and maintained comprehensive documentation throug
 * How was the data managed throughout the collection, processing, analysis and interpretation steps?
 * Why did you choose the research methodologies you used?
 
-
-
-
 ## The rationale to map the business requirements to the Data Visualisations
 
 A Data analyst has been approached by a Football data company that has provided a comprehensive dataset that contains information on football players. This includes the following; Players characteristics/attributes such as full name, age, date of birth, height, weight etc. Player technical skills such as passing, finishing, volleys, dribbling etc, it also includes players financial information such as players wages, values and release clauses and information about their national team such as nationality, national team, national rating, national team position etc.
@@ -251,35 +266,52 @@ The company consists of a range of Stakeholders: Football scouts, football agent
 BR1: Player Valuation
 •Identify the relationships between player attributes such as age, skill ratings, international reputation and their wages, value and release clauses.
 •Show relationships with data visualisations such as scatter plots and heat maps.
-•Succes criteria:
+
+•Succes criteria: Using some of the variables above overall rating, wage euro, value euro and release clause euro, relationships were identified using heatmaps and scatter plots. The correlation matrix was utilised to calculate the Pearson correlation coefficient between the variables in the dataset.
+
+* overall_rating vs wage_euro 0.74 Strong — better players earn more
+
+* overall_rating vs value_euro0.83 Very strong — better players are worth more
+
+* overall_rating vs release_clause_euro 0.82 Very strong — better players have higher release clauses 
+
+* value_euro vs release_clause_euro 0.99 Near perfect — clubs set release clauses based on value 
+
+* wage_euro vs value_euro 0.86 Very strong — higher earners are valued more
 
 BR2: Players performances
 •Analyse and compare player skill ratings, such as finishing, passing, crossing.
 •Enable stakeholders to filter and identify players by position and skillset.
 •Provide visualisations that highlight top 10 performing players
-•Success criteria:
+
+•Success criteria: Grouping player attributes, player skills ratings were compared. The top performing players were shown on the dashboard in PowerBI.
 
 BR3: Player Biographical Profiling
 •Access to biographical and physical data such as age, nationality, height and weight
-•Success criteria:
+•Success criteria: Height vs Weight by position group using a scatterplot with a trend line, top 10 players by overall rating with name and nationality using a bar chart, age distribution by number of players using a histogram.
 
 BR4: Predict player model
 •Develop a machine learning model to predict a player's wage or release clause based on their attributes
 •Achieve a minimum acceptable accuracy on unseen data
 •Enable stakeholders such as agents and clubs to estimate a player's market value before negotiations
-•Success Criteria: Model R² ≥ 0.85, MAE within an acceptable euro threshold, validated through cross-validation
+
+•Success Criteria: created simple linear transgression, random tree transgression.
+Grouped Random Forest Model Mean Squared Error: 7373506971534.81
+Grouped Random Forest Model R-squared: 0.9702
 
 BR5: Player profiles internationally
 •Analyse the relationship between a player's international reputation, overall rating, and their public profile
 •Support stakeholders such as advertising companies, journalists, and content creators in identifying high profile players
 •Provide rankings and visualisations of players by overall rating and international reputation
-•Success Criteria:
+
+•Success Criteria: comparing the overall rating distribution by international reputation using a histogram and a violin plot.
 
 BR6: Interactive Dashboard & Data Exploration
 •Create a user friendly dashboard for non-technical stakeholders to explore player data
 •Enable filtering and segmentation by multiple criteria including position, nationality, age, and skill ratings
 •Provide real time visualisations of player distributions and comparisons
-•Success Criteria: Dashboard accessible without coding knowledge, responsive to all filter combinations, and usable by stakeholders ranging from football fans to professional scouts
+
+•Success Criteria: Dashboard created which is responsive to all filter combinations, and usable by stakeholders ranging from football fans to professional scouts.
 
 ## Analysis techniques used
 
@@ -287,13 +319,14 @@ Structured approach: I structured the data analysis technique by following the m
 
 Data limitations: The data did not present any limitations; however, it could have been more of a challenge. There were no missing values or duplicates, which streamlined the data cleaning process. Additionally, there was only one categorical variable which I could not conduct in-depth analysis on categorical data.
 
-Generative AI: I used AI to help with the code and ideas which helped me immensely throughout this project.
+Generative AI: I used gen AI throughtout the project. The planning and bouncing of ideas at the start of the project for user stories and business requirements. 
 
 ## Data Ethics
 
 Ethics refers to the moral principles that govern a person's or organisation's behaviour and decision making. In the context of data and artificial intelligence, ethics concerns how data is collected, used, and interpreted, and whether the systems built from that data are fair, transparent, and beneficial to society. The overarching goal of data ethics can be summarised simply as maximum benefit and minimum harm.
 
 ## Asimov's Laws of Robotics
+
 The foundation of thinking about machine ethics was established by science fiction writer Isaac Asimov in 1942, who proposed three laws of robotics that remain highly relevant to AI development today:
 
 * A robot may not injure a human being, or through inaction allow a human being to come to harm.
@@ -353,41 +386,193 @@ Best practice to reduce bias includes using a 'dislike' feedback mechanism, givi
 
 * How did you overcome any legal or societal issues?
 
+Images were not incorporated into my dashboard design due to the ethical concerns and legal restrictions associated with using images without proper authorisation. Should images be included, it would be essential to address the relevant ethical and legal considerations outlined below.
+
+* Ethical and Legal Considerations for Image Use
+
+* Ethical Considerations
+
+When utilising images, it is essential to demonstrate respect for creators by acknowledging their contributions and valuing their work. Creators possess moral rights, which include receiving proper credit for their creations and having the opportunity to object if their work is used in a manner that could harm their reputation. Furthermore, maintaining professional integrity means avoiding the use of random or uncredited images, as this can undermine credibility and reflect poorly on one's standards.
+
+* Legal Risks
+
+There are significant legal risks associated with the use of images. Most images are protected by automatic copyright from the moment they are created, regardless of whether a copyright symbol is present. Using such images without explicit permission or a valid licence constitutes copyright infringement and may result in legal consequences.
+
+* *Exceptions
+
+Some exceptions to copyright restrictions exist, such as fair use and Creative Commons licences. These provisions allow limited usage of certain images, provided the conditions of the licence or fair use criteria are strictly adhered to.
+
+## Legal frameworks that applies to personal sports data 
+
+In professional football, the General Data Protection Regulation (GDPR) and the UK Data Protection Act 2018 (DPA 2018) provide the primary legal framework for managing player data. This framework treats performance statistics and physiological metrics as personal data, placing significant responsibilities on clubs and third-party data firms to protect player privacy. 
+
+1.Classification of Player Data
+
+Under GDPR, data is categorised based on its sensitivity, which dictates the level of protection required:
+Personal Data: General statistics such as height, weight, goals scored, and appearances are considered personal data because they identify a specific natural person.
+
+Special Category Data: Highly sensitive information—including biometric data (e.g., heart rate, fatigue levels, running mechanics) and health data (e.g., injury records, medical diagnoses)—falls under "special category" data. Processing this requires much stricter legal conditions.
+
+2.Lawful Bases for Processing
+
+Clubs and data companies must have a "lawful basis" to collect and use player data. The most relevant grounds include: 
+
+Consent: For sensitive biometric and health data, clubs typically must obtain explicit consent. However, regulators caution that consent in an employer-employee relationship (club vs. player) may not always be "freely given" due to the power imbalance.
+Legitimate Interests: Organisations often rely on this for non-sensitive performance data, arguing they have a valid business reason (e.g., scouting or match analysis). This requires a Legitimate Interest Assessment (LIA) to ensure it doesn't override the player’s rights.
+
+Contractual Necessity: Data collection may be deemed necessary to fulfill a player’s employment contract, such as monitoring fitness for match selection.
+
+3.Key Player Rights
+
+Footballers have specific rights regarding their personal and performance data:
+
+Right of Access (SAR): Players can request a copy of all data held on them by a club or third party.
+
+Right to Rectification: Players can demand corrections to inaccurate data, which is critical as errors in stats could impact their transfer value or career prospects.
+
+Right to Erasure ("Right to be Forgotten"): Players can request the deletion of their data when it is no longer necessary, such as after retirement or a transfer.
+
+Right to Withdraw Consent: Players can withdraw their consent for data processing at any time without it jeopardising their contract.
+
+4.Legal Challenges: Project Red Card
+
+A significant movement known as Project Red Card involves hundreds of professional players challenging data firms over the unlicensed use of their performance statistics.
+
+Core Argument: Players argue that firms are profiting from their personal data (stats like goals and passing accuracy) without consent or compensation, which they believe contravenes GDPR.
+
+Goal: The group seeks compensation for past use and the establishment of a licensing model where players are treated as stakeholders in the data ecosystem. 
+
+5.Accountability and Transparency
+
+Clubs act as data controllers and must maintain transparency: 
+
+Privacy Notices: Organisations must clearly inform players about what data is collected, why it is used, and who it is shared with (e.g., betting companies or video game developers).
+
+Data Protection Impact Assessments (DPIAs): These are mandatory before implementing high-risk processing, such as new biometric tracking systems.
+
+Data Security: Organisations must use encryption and anonymisation to protect sensitive player information from breaches.
+
+## Ethical considerations of using individual player performance data or any biases in the dataset
+
+* Performance tracking can easily become intrusive.
+
+Power imbalance: Players may feel pressured to share data (e.g., GPS, sleep) to keep their place, raising doubts about true consent.
+
+Mental health: Constant monitoring can create a “never off-duty” feeling, increasing stress and risk of burnout.
+
+* Interpretation of data can be based
+
+Style bias: Metrics may favour certain playing styles while undervaluing less measurable skills.
+
+Age bias: Algorithms may misjudge players as declining based on physical data alone, ignoring experience.
+
+Confirmation bias: Data can be selectively used to support pre-existing opinions.
+
+* Who benefits from player data is a major ethical issue.
+
+Monetisation: Third parties may profit from player data without compensating players.
+
+Career impact: Inaccurate or misleading stats can harm a player’s reputation, value, and earnings.
+
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
+
+* The dashboard was thoughtfully designed with accessibility in mind, particularly for non-technical users. To achieve this, a navigation bar was added to each page, with buttons that included hover and select effects. The background colour was carefully chosen, and emojis were incorporated to make navigation more engaging and intuitive. These design choices help users easily access different pages and interact with the dashboard, ensuring it is user-friendly and approachable for those unfamiliar with technical interfaces.
+
+🏠 Homepage - The homepage serves as the initial landing page and features a bar chart displaying the top players by overall rating. Additionally, a pie chart illustrates players based on their international reputation, both of which offer visually appealing insights suitable for non-technical users. An age slicer allows users to filter the data by specific age ranges, providing a straightforward way to narrow down information. Cards summarising statistics, such as the average attack, were created by utilising DAX measures like Avg Attack = ROUND(AVERAGE('cleaned_data'[attack_attributes]), 1), offering concise and meaningful metrics.
+
+📊 Player Performance - The Player Performance section includes a slicer for overall ratings, employing a range slider that enables users to filter between two rating values. Clustered column charts highlight the top five players, with the Top N filter set to Top 5. A table is also provided to display the top players by overall rating. This section is specifically tailored for non-technical users, presenting performance data in an accessible and clear format.
+
+💡 Data Insights - In the Data Insights section, a hypotheses results table is provided, along with text boxes summarising findings and a card highlighting correlation findings. This area is aimed at technical users, as it delves into hypothesis testing and provides more detailed analytical information.
+
+🤖 ML Prediction Models - The ML Prediction Models section features model performance cards created using DAX measures, a bar chart showing feature importance, and text boxes detailing key findings. This section caters to technical users, offering a comprehensive overview of machine learning prediction results.
+
+* Reflections
+
+A mind map was used to plan the dashboard design, although some aspects were omitted or revised as the data findings emerged. Ethical considerations influenced the decision not to use images of footballers. To enhance familiarity with PowerBI, resources such as YouTube videos and articles on DAX measures were consulted. Although there was an intention to use a theme from the Microsoft Fabric community, the extensive range of options and limited time meant this could not be pursued.
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+
+* All bugs in this project have been resolved; there are no outstanding issues remaining.
+
+* I recognized gaps in my knowledge with machine learning algorithms and feature engineering. These are complicated and I had to go back to the LMS and refresh my knowledge. I watched youtube videos and visited websites such as GeeksforGeeks and datacamp to help me gain a better understanding of these topics.
+
+* I used auto completion in VS code, chatgpt, co-pilot and gemini to help with the code.
+
+* I also used co-pilot to help me structure sentences in a formal way when writing Markdown and README documentation.
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+
+1. Project Planning & Getting Started
+
+ The initial planning phase of this project was extensive, utilising multiple tools simultaneously including a Kanban board, Trello, mind maps, and handwritten notes. While thorough planning is beneficial, the volume of planning tools used slowed the start of the practical work. In future projects, a more streamlined approach using one or two planning tools would allow for a faster transition into implementation. 
+
+2. Time Management 
+
+Due to the slow start caused by the extensive planning phase, time constraints became a recurring challenge throughout the project. This impacted the final dashboard design, which could have been more dynamic and visually polished given more time. Future projects would benefit from setting stricter time boundaries
+
+3. Feature Engineering & Pipeline Issues
+
+During the feature engineering phase, several technical challenges were encountered: - The pipeline was initially run in separate Jupyter notebook cells, causing the grouped feature columns to be lost when the pipeline transformed the data. This was resolved by consolidating all dependent steps into a single cell to ensure correct execution order. - A duplicate "vision" attribute was discovered in the passing_attributes group after the model had been trained, resulting in vision being double weighted. While the impact on the final R² score was minimal, this highlighted the importance of thoroughly reviewing feature engineering steps before model training.
+
+4. File Path & Data Management
+
+Managing multiple versions of the dataset across different folders caused confusion during the cleaning and saving process. The cleaned dataset was initially saved to the wrong directory, resulting in the original raw data being loaded instead of the cleaned version. This was resolved by ensuring consistent file paths were used throughout the notebook and that the correct dataset was always verified after loading using print(df.columns.tolist()).
+
+5. Machine Learning Model Performance
+
+The initial Linear Regression models produced R² scores below the target of 0.85, with the simple baseline model achieving only 0.6797. Multiple iterations were required, progressing through extended linear regression and grouped feature models before switching to a Random Forest Regressor, which achieved the target with an R² score of 0.9702. This highlighted the importance of selecting the appropriate algorithm for non-linear data.
+
+## Reflections
+
+* Consolidate dependent code into single notebook cells to avoid execution order issues.
+
+* Verify file paths and loaded data after every save and load operation.
+
+* Always test multiple ML algorithms rather than relying on a single approach 
+
+* Streamline planning tools to avoid slow project starts 
+
+* Review feature engineering steps thoroughly before model training to catch errors such as duplicate attributes early
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+
+* Numpy and Pandas – used for data processing
+
+* Matplotlib and Seaborn – used for data visualisation.
+
+* sklearn.model_selection import train_test_split, sklearn.linear_model import LinearRegression, sklearn.metrics import mean_squared_error, r2_score
+
+* Statistical tests – used for statistical analysis
+
+* PowerBI – used for Dashboard.
 
 
-## Credits 
+## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+### Content
 
-### Content 
+* Repository and README templates from the following links - https://github.com/Code-Institute-Org/data-analytics-template
+https://github.com/Code-Institute-Solutions/da-README-template
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+* Setting up project in Github by following these slides - https://docs.google.com/presentation/d/1GvPq9uAxaO9lT5a-60Wgk0u0ol4tygyE/edit?slide=id.g2edbf99dd81_0_61#slide=id.g2edbf99dd81_0_61
+
+* Navigation bar help in PowerBI https://youtu.be/VjtdazTz3ho?si=b0knnXCxnMuNI7tB
+
+* Machine learning algorithm help https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/
+https://www.geeksforgeeks.org/machine-learning/random-forest-algorithm-in-machine-learning/
+
+* Refreshing powerBI tricks and tips - https://www.datacamp.com/tutorial/tutorial-power-bi-for-beginners
+
+* I went over DAX measures in PowerBI - https://media.datacamp.com/legacy/image/upload/v1653826988/Marketing/Blog/Formulas_in_DAX_Cheat_Sheet.pdf
+
+* I took inspirations for designing the dashboard - https://community.fabric.microsoft.com/t5/Themes-Gallery/EUROCUP-historical-analysis/m-p/3974299
+
+* Refreshed my knowledge by going over previous modules in the LMS - https://lms.codeinstitute.net/learner_module/show/118491?from=%2Flearner_module%2Fshow%2F118491%3Flesson_id%3D506362%26section_id%3D1920576&lesson_id=506363
 
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
+* No external media used.
 
+## Acknowledgements
 
-
-## Acknowledgements (optional)
+* I would like to thank my course coordinators, Vasi and Mark for providing help in preparing the project and support throughout.
