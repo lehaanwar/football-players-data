@@ -4,12 +4,16 @@
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+Live Dashboard link:
+https://app.powerbi.com/groups/me/reports/9365cfbe-6f2d-47f5-bc1d-e8c314a07156/7e4ed45010e68ff28721?experience=power-bi
+
 
 ## Dataset Content
+
 * The dataset chosen is from Kaggle;
  https://www.kaggle.com/datasets/maso0dahmed/football-players-data/data
 
-* The football dataset offers information for around 17,000 players. Thsi includes; 
+* The football dataset offers information for around 17,000 players. This includes; 
 name: Name of the player.
 full_name: Full name of the player.
 birth_date: Date of birth of the player.
@@ -62,12 +66,15 @@ marking: Rating for marking.
 standing_tackle: Rating for standing tackle.
 sliding_tackle: Rating for sliding tackle.
 
-* This dataset is ideal for data analysis, predictive modeling, and machine learning projects. It can be used for:
+* I chose this dataset as it is ideal for data analysis, predictive modeling, and machine learning projects. It can be used for:
 
-Player performance analysis and comparison.
-Market value assessment and wage prediction.
-Team composition and strategy planning.
-Machine learning models to predict future player potential and career trajectories.
+* Player performance analysis and comparison.
+
+* Market value assessment and wage prediction.
+
+* Team composition and strategy planning.
+
+* Machine learning models to predict future player potential and career trajectories.
 
 ## Stakeholders
 
