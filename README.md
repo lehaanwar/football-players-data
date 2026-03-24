@@ -66,15 +66,7 @@ marking: Rating for marking.
 standing_tackle: Rating for standing tackle.
 sliding_tackle: Rating for sliding tackle.
 
-* I chose this dataset as it is ideal for data analysis, predictive modeling, and machine learning projects. It can be used for:
-
-* Player performance analysis and comparison.
-
-* Market value assessment and wage prediction.
-
-* Team composition and strategy planning.
-
-* Machine learning models to predict future player potential and career trajectories.
+* I chose this dataset as it is ideal for data analysis, predictive modeling, and machine learning projects.
 
 ## Stakeholders
 
@@ -108,17 +100,17 @@ sliding_tackle: Rating for sliding tackle.
 
 * US4 - As a football pundit or journalist, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can accurately describe and report on players when commentating or writing.
 
-* US4 - As a Fantasy football player and a punter, I want to access detailed player profiles — including full name, position(s) and skill ratings — so that I can make infored decisions when selecting players and placing any bets.
+* US5 - As a Fantasy football player and a punter, I want to access detailed player profiles — including full name, position(s) and skill ratings — so that I can make infored decisions when selecting players and placing any bets.
 
-* US4 - As a social media content creator, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can produce accurate and engaging content that analyses and showcases players to my audience.
+* US6 - As a social media content creator, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can produce accurate and engaging content that analyses and showcases players to my audience.
 
-* US4 - As a national team manager, I want to access detailed player profiles — including skill ratings, international reputation, national rating, position(s), age, and nationality — so that I can make informed selection decisions when choosing players for my national squad.
+* US7 - As a national team manager, I want to access detailed player profiles — including skill ratings, international reputation, national rating, position(s), age, and nationality — so that I can make informed selection decisions when choosing players for my national squad.
 
-* US4 - As an advertising company, I want to access detailed player profiles — including full name, date of birth, age, height, weight, position(s), nationality, overall rating, and international reputation — so that I can make informed decisions when selecting the most suitable player for my marketing campaigns.
+* US8 - As an advertising company, I want to access detailed player profiles — including full name, date of birth, age, height, weight, position(s), nationality, overall rating, and international reputation — so that I can make informed decisions when selecting the most suitable player for my marketing campaigns.
 
-* US4 - As a video game creator, I want to access comprehensive player profiles — including full name, physical attributes, skill ratings, position(s), nationality, and overall rating — so that I can accurately represent each player as a realistic in-game avatar.
+* US9 - As a video game creator, I want to access comprehensive player profiles — including full name, physical attributes, skill ratings, position(s), nationality, and overall rating — so that I can accurately represent each player as a realistic in-game avatar.
 
-* US4 - As a football fan, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can engage in informed and meaningful discussions about players with my friends and peers.
+* US10 - As a football fan, I want to access detailed player profiles — including full name, age, preferred foot, position(s), national team, and skill ratings — so that I can engage in informed and meaningful discussions about players with my friends and peers.
 
 ## Business Requirements
 
@@ -130,34 +122,28 @@ BR1: Player Valuation
 •Identify the relationships between player attributes such as age, skill ratings, international reputation and their wages, value and release clauses.
 •Show relationships with data visualisations such as scatter plots and heat maps.
 
-
 BR2: Players performances
 •Analyse and compare player skill ratings, such as finishing, passing, crossing.
 •Enable stakeholders to filter and identify players by position and skillset.
 •Provide visualisations that highlight top 10 performing players
 
-
 BR3: Player Biographical Profiling
 •Access to biographical and physical data such as age, nationality, height and weight
-•
 
 BR4: Predict player model
 •Develop a machine learning model to predict a player's wage or release clause based on their attributes
 •Achieve a minimum acceptable accuracy on unseen data
 •Enable stakeholders such as agents and clubs to estimate a player's market value before negotiations
 
-
-BR5: Player profiles internationally
+ BR5: Player profiles internationally
 •Analyse the relationship between a player's international reputation, overall rating, and their public profile
 •Support stakeholders such as advertising companies, journalists, and content creators in identifying high profile players
 •Provide rankings and visualisations of players by overall rating and international reputation
-
 
 BR6: Interactive Dashboard & Data Exploration
 •Create a user friendly dashboard for non-technical stakeholders to explore player data
 •Enable filtering and segmentation by multiple criteria including position, nationality, age, and skill ratings
 •Provide real time visualisations of player distributions and comparisons
-
 
 ## Hypothesis and how to validate?
 
@@ -254,9 +240,6 @@ Created a Machine Learning algorithm to predict value_euro based on overall_rati
 Reports:
 Consistently reported progress and maintained comprehensive documentation throughout the project's duration.
 
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
-
 ## The rationale to map the business requirements to the Data Visualisations
 
 A Data analyst has been approached by a Football data company that has provided a comprehensive dataset that contains information on football players. This includes the following; Players characteristics/attributes such as full name, age, date of birth, height, weight etc. Player technical skills such as passing, finishing, volleys, dribbling etc, it also includes players financial information such as players wages, values and release clauses and information about their national team such as nationality, national team, national rating, national team position etc.
@@ -317,9 +300,9 @@ BR6: Interactive Dashboard & Data Exploration
 
 Structured approach: I structured the data analysis technique by following the module handbook and going through each criteria to add to my project, this included reviewing each section. By adhering to the handbook's guidance, I was able to incorporate all necessary elements and maintain consistency throughout the analysis process.
 
-Data limitations: The data did not present any limitations; however, it could have been more of a challenge. There were no missing values or duplicates, which streamlined the data cleaning process. Additionally, there was only one categorical variable which I could not conduct in-depth analysis on categorical data.
+Data limitations: The data did not have any limitations, it was great for data analysis.
 
-Generative AI: I used gen AI throughtout the project. The planning and bouncing of ideas at the start of the project for user stories and business requirements. 
+Generative AI: I used gen AI throughtout the project; for the planning and ideation at the start of the project, throught to the data cleaning and visualisation. I used co-pilot to helpw with sentence structure and fixing any bugs. I also used chatgpt to fix codes that were difficult to fix via co-pilot.
 
 ## Data Ethics
 
